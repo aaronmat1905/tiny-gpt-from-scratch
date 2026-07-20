@@ -27,8 +27,11 @@ def build_itos(vocab):
     # TODO: build an int-to-string lookup from the vocab list
     return {i:vocab[i] for i in range(len(vocab))}
 
-# Step 4 - encode_char (not yet solved)
-# TODO: implement
+# Step 4 - encode_char
+def encode_char(ch, stoi):
+    """Return the integer token id for a single character ch using stoi."""
+    # TODO: look up ch in the stoi mapping and return its id
+    return stoi[ch]
 
 # Step 5 - encode_string (not yet solved)
 # TODO: implement
