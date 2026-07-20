@@ -21,8 +21,11 @@ def build_stoi(vocab):
     # TODO: map each character in vocab to its integer position
     return{vocab[i]:i for i in range(len(vocab))}
 
-# Step 3 - build_itos (not yet solved)
-# TODO: implement
+# Step 3 - build_itos
+def build_itos(vocab):
+    """Return a dict mapping each index 0..len(vocab)-1 to its character."""
+    # TODO: build an int-to-string lookup from the vocab list
+    return {i:vocab[i] for i in range(len(vocab))}
 
 # Step 4 - encode_char (not yet solved)
 # TODO: implement
