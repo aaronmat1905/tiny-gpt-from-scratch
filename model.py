@@ -259,7 +259,7 @@ import numpy as np
 def stable_softmax_1d(logits):
     """Numerically stable softmax over a 1D logits vector."""
     # TODO: subtract the max before exponentiating, then normalize.
-    shift = max_along_axis(logits, axis=0)
+    shift = max_along_axis(logits, axis=0) # Here we are subtracting the maximum number 
     shifted = logits - shift 
     exps = array_exp(shifted)
     denom = sum_all(exps)
