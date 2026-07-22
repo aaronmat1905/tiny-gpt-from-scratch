@@ -265,8 +265,17 @@ def stable_softmax_1d(logits):
     denom = sum_all(exps)
     return exps/ denom
 
-# Step 33 - stable_softmax_2d_rowwise (not yet solved)
-# TODO: implement
+# Step 33 - stable_softmax_2d_rowwise
+import numpy as np
+
+def stable_softmax_2d_rowwise(logits):
+    """Row-wise numerically stable softmax of a 2D logits array."""
+    # TODO: turn each row of logits into a probability distribution without overflowing
+    rowMax = np.max(logits, axis=1, keepdims=True)
+    shifted = logits-rowMax 
+    exps = np.exp(shifted)
+    rowSum = np.sum(exps, axis=1, keepdims=True)
+    return exps / rowSum
 
 # Step 34 - read_text_file (not yet solved)
 # TODO: implement
